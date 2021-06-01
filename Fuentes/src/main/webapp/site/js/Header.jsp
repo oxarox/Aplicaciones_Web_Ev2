@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -11,12 +15,12 @@
 
 
  <header>
-  <section id="logo"><!-- Recordar hacer la letra más pequeña y definir los marcos para que no haya espacio por el h1. Que la letra sea responsiva-->
-    <h1 >Conocimiento para cada día con Odiseo</h1>
+  <section id="logo"><!-- Recordar hacer la letra mÃ¡s pequeÃ±a y definir los marcos para que no haya espacio por el h1. Que la letra sea responsiva-->
+    <h1 >Conocimiento para cada dÃ­a con Odiseo</h1>
   </section>
 
   <section>
-    <!-- Sección del Navigation Bar con las opciones a trabajar para cada página-->
+    <!-- SecciÃ³n del Navigation Bar con las opciones a trabajar para cada pÃ¡gina-->
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#537791">
 
@@ -28,7 +32,7 @@
       </div>
 
 
-      <!-- Botón collapsable-->
+      <!-- BotÃ³n collapsable-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra_buscadora" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
