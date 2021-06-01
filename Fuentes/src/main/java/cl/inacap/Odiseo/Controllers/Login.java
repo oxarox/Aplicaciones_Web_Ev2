@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cl.Inacap.FormLogin.Controllers.Funciones;
+
 /**
  * Servlet implementation class Login
  */
@@ -25,9 +27,13 @@ public class Login extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+    
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //levantar vista login.jsp
+		
+		
 	}
 
 	/**
@@ -35,6 +41,21 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		
+		String Usuario= request.getParameter("nombreUsuario").toString();
+		
+		//encriptado aca !!
+		
+		Funciones fn=new Funciones();
+		String Pass = fn.EncriptarMd5(request.getParameter("passUsuario").toString());
+		
+		if(Usuario.equals("root") && Pass.equals("63a9f0ea7bb98050796b649e85481845")) {
+		
+			
+		}
+		 
+		
 		doGet(request, response);
 	}
 
