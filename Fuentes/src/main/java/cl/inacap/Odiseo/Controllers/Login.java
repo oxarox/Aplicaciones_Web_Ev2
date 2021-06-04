@@ -33,6 +33,7 @@ public class Login extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //levantar vista login.jsp
 		
+    	request.getRequestDispatcher("site/js/Login.jsp").forward(request, response);
 		
 	}
 
@@ -52,11 +53,14 @@ public class Login extends HttpServlet {
 		
 		if(Usuario.equals("root") && Pass.equals("63a9f0ea7bb98050796b649e85481845")) {
 		
-			System.out.println("Bienvenido");
+			System.out.println("1");
+		}else {
+			System.out.println("0");
+			
 		}
 		 
 		
-		doGet(request, response);
+
 	}
 
 }
