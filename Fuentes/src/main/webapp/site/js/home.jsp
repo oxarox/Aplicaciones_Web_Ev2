@@ -25,6 +25,8 @@
   </section>
  
  
+ hola wacho
+ 
  
  
  <jsp:include page="Footer.jsp"/>
