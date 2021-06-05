@@ -7,6 +7,25 @@
 
 <!--  Le puse listado para que fuera mas facil identificar donde van las listas -->
 
+ <body>
+ 
+ 
+  
+
+  <section>
+    <!-- Sección de los libros a describir-->
+
+
+    <div class="container" style="bacground-color:#c1c0b9">
+
+
+    </div>
+  </section>
+ 
+ 
+ 
+ 
+ 
 
 
 

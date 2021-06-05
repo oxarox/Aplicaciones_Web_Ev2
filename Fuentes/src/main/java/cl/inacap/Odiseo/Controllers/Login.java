@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cl.Inacap.FormLogin.Controllers.Funciones;
+//import cl.Inacap.FormLogin.Controllers.Funciones;
 
 /**
  * Servlet implementation class Login

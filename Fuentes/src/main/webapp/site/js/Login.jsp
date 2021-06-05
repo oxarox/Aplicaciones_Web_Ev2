@@ -8,7 +8,10 @@
 
 <title>Login usuario</title>
 </head>
-<!-- diseno de esta pag plz  -->
+
+ <jsp:include page="Header.jsp" />
+ 
+
 
 <body>
 
@@ -53,7 +56,7 @@
 
 	
 
-</body>
+ <jsp:include page="Footer.jsp" />
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
