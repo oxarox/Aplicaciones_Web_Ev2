@@ -46,16 +46,16 @@
         <ul class="navbar-nav ml-auto ">
 
           <li class="navbar-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="home.jsp" class="nav-link">Home</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="nav-link">Buscador</a>
+            <a href="listado.jsp" class="nav-link">Buscador</a>
           </li>
 
           <!-- Recordar hacer este item como un collapsable-->
           <li class="navbar-item">
-            <a href="#" class="nav-link">Login</a>
+            <a href="Login.jsp" class="nav-link">Login</a>
           </li>
 
         </ul>
