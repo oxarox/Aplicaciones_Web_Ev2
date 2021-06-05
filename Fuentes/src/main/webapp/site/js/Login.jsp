@@ -11,7 +11,7 @@
 
  <jsp:include page="Header.jsp" />
  
-<!-- diseno de esta pag plz  -->
+
 
 <body>
 
