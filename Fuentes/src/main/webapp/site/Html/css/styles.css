@@ -20,17 +20,26 @@
 
 
 
- /*Bibliografía:https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html*/
+ /*Bibliografia:https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html*/
  }
 
  .CabeceraDePagina h1{
    margin-bottom: 0;
  }
 .card-container{
-  width: 18rem;
+  width: 300px;
   perspective: 200rem;
   position: relative;
   height: 421px;
+  margin-left:50%;
+  margin-right:50%;
+  left: 40%;
+  right: 50%;
+}
+.card-front{
+	width:300px;
+	right:0;
+	left:0;
 }
 
 .card-container:hover .card-front{
@@ -45,12 +54,17 @@
   transform: rotateY(180deg);
 }
 
+.card-back .card-body{
+	position:relative;
+}
+
 .card{
   position: absolute;
   height: 100%;
   width:100%;
   transition: all 1s;
   backface-visibility: hidden;
+  align-items:center;
 
 }
 .card-body a{
@@ -58,7 +72,13 @@
   top: 90%;
   left: 50%;
   margin: -15% 0 0 -25%;
+  margin-bottom:auto;
 }
-.card-front img{
-  img
+
+
+
+.card-descriptor{
+  height: 30%;
+  width: 80%;
+  margin: auto;
 }
