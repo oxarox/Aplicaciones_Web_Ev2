@@ -37,6 +37,7 @@
         <li data-target="#carrusel_destacados" data-slide-to="0" class="active"></li>
         <li data-target="#carrusel_destacados" data-slide-to="1"></li>
         <li data-target="#carrusel_destacados" data-slide-to="2"></li>
+        <li data-target="#carrusel_destacados" data-slide-to="3"></li>
       </ol>
 
       <!--Secciones de cada carrusel-->
@@ -62,6 +63,12 @@
             <h5 style="color: black"><i>Ciencias Sociales</i></h5>
           </div>
         </div>
+        <div class="carousel-item ">
+          <img src="https://images5.alphacoders.com/105/1051727.jpg" class="d-block w-100" alt="..." height="18%" width="100%">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: white"><i>Ciencia Ficción</i></h5>
+          </div>
+        </div>
       </div>
 
       <!-- Botones del carrusel-->
@@ -79,7 +86,14 @@
 
 
     <!--Constructor de la carta -->
-    <div class="container-fluid" styles="height:300px">
+    
+    <div class="card-deck">
+    
+    
+    </div>
+    <div class="cartas_destacadas">
+    
+    <div class="container" styles="height:300px width:300px">
     <div class="card-container mx-auto mt-5">
                          <!-- Parte delantera de la carta-->
 
@@ -119,6 +133,7 @@
 
 
 	</div>
+    </div>
   </section>
 
 
