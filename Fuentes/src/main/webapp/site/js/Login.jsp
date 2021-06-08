@@ -92,8 +92,8 @@
 				
 				$.ajax({
 					type:"POST",
-					url:"Login.do",
 					data:ObjSend,
+					url:"Login.do",// aqui tengo el problema no encuentra el login.do
 					success:function(varObjBackend){
 						console.log(varObjBackend);
 						if(varObjBackend==true){
@@ -105,7 +105,6 @@
 			
 		}
 		
-	
 	
 	</script>
 	

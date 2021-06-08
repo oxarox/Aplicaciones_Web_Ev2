@@ -13,6 +13,14 @@ public class libroDAO {
 		arrLibros.add(p);
 	}
 	
+	public void addAllLibros(List<Libro> l) {
+		arrLibros.addAll(l);
+	}
+	
+	public List<Libro> getAllLibros() {
+		return arrLibros;
+	}
+	
 	public void deleteLibro(int id) {
 		arrLibros.remove(id);
 	}
