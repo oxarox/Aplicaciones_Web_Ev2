@@ -13,6 +13,9 @@
  #header{
    box-shadow: 0,0,0,0.7;
  }
+ *{
+ 	font-family: 'Playfair Display', serif;
+ }
  .carousel-item img{
    object-fit: cover;
    width: 35vw;
@@ -20,45 +23,127 @@
 
 
 
- /*BibliografÃ­a:https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html*/
+ /*Bibliografia:https://escss.blogspot.com/2015/01/recorte-centrado-automatico-imagen.html*/
  }
-
+ 
+ 
+ 
+ 
+              /*------------Sección del Home---------------*/
  .CabeceraDePagina h1{
    margin-bottom: 0;
  }
-.card-container{
-  width: 18rem;
+.cartas_destacadas .card-container{
+  width: 300px;
   perspective: 200rem;
   position: relative;
   height: 421px;
+  margin-left:50%;
+  margin-right:50%;
+  left: 40%;
+  right: 50%;
+}
+.cartas_destacadas .card-front{
+	width:300px;
+	right:0;
+	left:0;
 }
 
-.card-container:hover .card-front{
+.cartas_destacadas .card-container:hover .card-front{
   transform: rotateY(180deg);
 
 }
-.card-container:hover .card-back{
+.cartas_destacadas .card-container:hover .card-back{
   transform: rotateY(0deg);
 
 }
-.card-back{
+.cartas_destacadas .card-back{
   transform: rotateY(180deg);
 }
 
-.card{
+.cartas_destacadas .card-back .card-body{
+	position:relative;
+}
+
+.cartas_destacadas .card{
   position: absolute;
   height: 100%;
   width:100%;
   transition: all 1s;
   backface-visibility: hidden;
+  align-items:center;
 
 }
-.card-body a{
+.cartas_destacadas .card-body a{
   position: absolute;
   top: 90%;
   left: 50%;
   margin: -15% 0 0 -25%;
+  margin-bottom:auto;
 }
-.card-front img{
-  img
+
+
+
+.cartas_destacadas .card-descriptor{
+  height: 30%;
+  width: 80%;
+  margin: auto;
+}
+ 
+ 
+ 
+                 /*------------Sección del buscador---------------*/
+
+.buscador_acordeon .resultados{
+  margin: 20px;
+}
+
+.genero{
+  text-align: right;
+}
+.buscar{
+	position:absolute;
+	padding:5px;
+}
+
+.buscador_tags .container{
+	height:50px;
+	justify-content:center;
+	align-items:center;
+}
+.buscar input{
+	width:0;
+	height: 40px;
+	padding :0 20px;
+	font-size:18px;
+	color:black;
+	outline:none;
+	border:1px,solid silver;
+	border-radius: 30px;
+	transition: all 0.9s;
+}
+.buscador_tags .btn{
+	width:55px;
+	height:55px;
+	line-height: 55px;
+	top:0;
+	right:0;
+	position:absolute;
+	text-align: center;
+	color:white;
+	background:#c1c0b9;
+	font-size:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+
+.buscar:hover input{
+	width:360px;
+}
+.buscar input:focus{
+	width:360px;
+}
+                /*------------Sección del descriptor---------------*/
+.descripciones .container{
+	margin-top:50px;
 }

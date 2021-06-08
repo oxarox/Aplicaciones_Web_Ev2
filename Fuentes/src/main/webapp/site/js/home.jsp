@@ -37,6 +37,7 @@
         <li data-target="#carrusel_destacados" data-slide-to="0" class="active"></li>
         <li data-target="#carrusel_destacados" data-slide-to="1"></li>
         <li data-target="#carrusel_destacados" data-slide-to="2"></li>
+        <li data-target="#carrusel_destacados" data-slide-to="3"></li>
       </ol>
 
       <!--Secciones de cada carrusel-->
@@ -62,6 +63,12 @@
             <h5 style="color: black"><i>Ciencias Sociales</i></h5>
           </div>
         </div>
+        <div class="carousel-item ">
+          <img src="https://images5.alphacoders.com/105/1051727.jpg" class="d-block w-100" alt="..." height="18%" width="100%">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: white"><i>Ciencia Ficción</i></h5>
+          </div>
+        </div>
       </div>
 
       <!-- Botones del carrusel-->
@@ -79,14 +86,22 @@
 
 
     <!--Constructor de la carta -->
+    
+    <div class="card-deck">
+    
+    
+    </div>
+    <div class="cartas_destacadas">
+    
+    <div class="container" styles="height:300px width:300px">
     <div class="card-container mx-auto mt-5">
-                         #Parte delantera de la carta
+                         <!-- Parte delantera de la carta-->
 
 
       <div class="card card-front">
 
 
-                         #Imagen sacada de un url como forma de prueba
+                         <!-- Imagen sacada de un url como forma de prueba-->
 
 
         <img
@@ -98,13 +113,13 @@
         </div>
 
       </div>
-                        #Parte trasera de la carta
+                        <!-- Parte trasera de la carta-->
 
 
       <div class="card card-back">
         <div class="card-body">
 
-                        Debiera ponerse aquí un resumen acortado de lo que trata el libro
+                        <!-- Debiera ponerse aquí un resumen acortado de lo que trata el libro-->
 
 
           <p class="card-text">No se me ocurre que poner aquí a si que su Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -114,11 +129,11 @@
 
       </div>
     </div>
-  -->
     <!-- Bibliografía de como realizar el movimiento de las cartas : https://youtu.be/jVhwJgLOoGw-->
 
 
-
+	</div>
+    </div>
   </section>
 
 
