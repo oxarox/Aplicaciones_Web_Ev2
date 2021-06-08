@@ -13,7 +13,12 @@ public class libroDAO {
 		arrLibros.add(p);
 	}
 	
-	public List<Libro> getAllLibros(){
+	public void addAllLibros(List<Libro> l) {
+		arrLibros.addAll(l);
+	}
+	
+	public List<Libro> getAllLibros() {
+
 		return arrLibros;
 	}
 	
