@@ -18,6 +18,7 @@ public class libroDAO {
 	}
 	
 	public List<Libro> getAllLibros() {
+
 		return arrLibros;
 	}
 	
