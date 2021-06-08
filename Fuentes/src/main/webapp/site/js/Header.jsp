@@ -69,7 +69,7 @@
             <a href="listado.jsp" class="nav-link">Buscador</a>
           </li>
 
-          <!-- Recordar hacer este item como un collapsable-->
+          <!-- Esta wea sera perfil , login se utilizara para ver la pagina-->
           <li class="navbar-item">
             <a href="Login.jsp" class="nav-link">Login</a>
           </li>
