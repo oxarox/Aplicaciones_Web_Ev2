@@ -13,6 +13,10 @@ public class libroDAO {
 		arrLibros.add(p);
 	}
 	
+	public List<Libro> getAllLibros(){
+		return arrLibros;
+	}
+	
 	public void deleteLibro(int id) {
 		arrLibros.remove(id);
 	}
