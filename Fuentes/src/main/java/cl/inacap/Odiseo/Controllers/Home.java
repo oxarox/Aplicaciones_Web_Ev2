@@ -33,12 +33,16 @@ public class Home extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sessionValida= request.getSession(true);
-		FileReader archivo = new FileReader("/site/texto/LibroGuardados.txt");
-		String cadena = new BufferedReader(archivo).readLine();
+		
 		List<Libro> listaLibroTxt = new ArrayList<Libro>();
 		List<Libro> listaDestacados = new ArrayList<Libro>();
 		libroDAO ld=new libroDAO();
 		
+		//leer el archivo de Txt para traer los lisbros guadados de en una lista
+		FileReader archivo = new FileReader("/site/texto/LibroGuardados.txt");
+		String cadena = new BufferedReader(archivo).readLine();
+		
+		//General una lista para almacenar los libros
 		String [] stringLibros = cadena.split("/*--*/");
 		
 		for(int i = 0;i<=cadena.length();i++) {
@@ -57,12 +61,6 @@ public class Home extends HttpServlet {
 			listaLibroTxt.add(l);
 		}
 		
-		
-		//leer el archivo de Txt para traer los lisbros guadados de en una lista
-		
-		
-		//General una lista para almacenar los libros
-		
 		//filtrar los libros para enviar los libros destacados
 		for(Libro detalle:listaLibroTxt) {
 			if(detalle.isDestacado()){
@@ -72,10 +70,7 @@ public class Home extends HttpServlet {
 		
 		//mostar los libros destacados en el index
 		ld.addAllLibros(listaDestacados);
-		
-		
-	
-	
+
 	}
 
 	/**
