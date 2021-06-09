@@ -87,8 +87,8 @@
          			<td>${o.Paginas }</td>
          			<td>${o.Categoria }</td>
          			<td>${o.Portada }</td>
-         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar persona</a></td>
-                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')">Elminar persona</button></td>
+         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar libro</a></td>
+                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')">Elminar libro</button></td>
                         	
          		</tr>
          		</c:forEach>

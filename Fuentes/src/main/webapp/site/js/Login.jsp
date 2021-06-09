@@ -84,6 +84,7 @@
 				var ObjSend={
 						'nombreUsuario':$("#nombreUsuario").val(),
 						'passUsuario':$("#passUsuario").val()
+						
 				}
 				
 				//se que a lo mejor ajax complica, pero queria
@@ -95,18 +96,18 @@
 					url:"Login.do",
 					data:ObjSend,
 					success:function(varObjBackend){
-						console.log(varObjBackend);
+						//console.log(varObjBackend);
 						if(varObjBackend==true){
+							alert("Redireccionando")
 							location.href="Home.do"
+							
+						}else{
+							alert("Datos incorrectos")
 						}
 					}
 				});
-			}
-			
-		}
-		
-	
-	
+			}			
+		}	
 	</script>
 	
 	
