@@ -1,11 +1,16 @@
 package cl.inacap.Odiseo.Controllers;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 //import cl.Inacap.FormLogin.Controllers.Funciones;
 
@@ -51,11 +56,23 @@ public class Login extends HttpServlet {
 		Funciones fn=new Funciones();
 		String Pass = fn.EncriptarMd5(request.getParameter("passUsuario").toString());
 		
+		PrintWriter out = response.getWriter();
+		
 		if(Usuario.equals("root") && Pass.equals("63a9f0ea7bb98050796b649e85481845")) {
 		
-			System.out.println("1");
+			HttpSession session=request.getSession(true);	 
+			session.setAttribute("SessionActiva", "1");
+			
+			
+		    out.println(1);
+			
+				
+			
+		
 		}else {
-			System.out.println("0");
+			
+			 out.println(0);
+			
 			
 		}
 		 

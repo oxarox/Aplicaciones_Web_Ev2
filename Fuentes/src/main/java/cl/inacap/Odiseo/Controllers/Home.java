@@ -33,6 +33,15 @@ public class Home extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sessionValida= request.getSession(true);
+
+		if(sessionValida.getAttribute("SessionActiva")=="1") {
+			//La fuente siempre cuando exista una session en este caso SessionActiva =="1"
+			
+		}else {
+			response.sendRedirect("Login.do");
+			
+		}
+		
 		FileReader archivo = new FileReader("/site/texto/LibroGuardados.txt");
 		String cadena = new BufferedReader(archivo).readLine();
 		List<Libro> listaLibroTxt = new ArrayList<Libro>();
@@ -72,9 +81,6 @@ public class Home extends HttpServlet {
 		
 		//mostar los libros destacados en el index
 		ld.addAllLibros(listaDestacados);
-		
-		
-	
 	
 	}
 
