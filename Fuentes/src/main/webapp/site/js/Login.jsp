@@ -15,8 +15,8 @@
 
 <body>
 
-		<div class="container  ">
-        <div class="row " style="margin-top: 10%;">
+		<div class="container">
+        <div class="row align-item-center justify-content-center" style="margin-top: 10%; margin-bottom:10%">
             <div class="col-md-4 col-centered ">
                
                     <div class="row">
@@ -41,7 +41,7 @@
                     <br>
 
 
-                    <button type="button" class="btn btn-primary btn-block" onclick="LoginAcc()">Ingresar</button>
+                    <button type="button" class="btn btn-outline-success btn-block" onclick="LoginAcc()">Ingresar</button>
 
                 
             

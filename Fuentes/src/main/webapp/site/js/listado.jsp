@@ -14,18 +14,19 @@
  
   <!-- Busqueda mediante escrito -->
 
- <section class="buscador_tags">
+<section class="buscador_tags">
 	<div class="container">
-		<div class="buscar">
-			<input type="text" placeholder="¡Pruebe a buscar con la palabra 'Terror'!" required>
-		<div class="btn">
-			<i class="fas fa-compass"></i>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="buscar">
+					<input type="text" placeholder="¡Pruebe a buscar con la palabra 'Terror'!" required>
+					<div class="btn">
+						<i class="fas fa-compass"></i>
+					</div>
+				</div>		
+			</div>
 		</div>
 	</div>
-
-
-
-</div>
 </section>
 
 
