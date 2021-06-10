@@ -62,7 +62,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="listado.jsp" class="nav-link">Buscador</a>
+            <a href="listado.jsp" class="nav-link">Listado</a>
           </li>
 
           <!-- Esta wea sera perfil , login se utilizara para ver la pagina-->
