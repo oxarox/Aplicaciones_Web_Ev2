@@ -31,19 +31,15 @@
 
 
  <header>
-  <section id="logo"><!-- Recordar hacer la letra más pequeña y definir los marcos para que no haya espacio por el h1. Que la letra sea responsiva-->
-    <h1 >Conocimiento para cada día con Odiseo</h1>
-  </section>
-
-  <section>
     <!-- Sección del Navigation Bar con las opciones a trabajar para cada página-->
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#537791">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#00C851">
 
       <!--Logo de la marca-->
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="https://image.flaticon.com/icons/png/512/1055/1055152.png" alt="" width="30" height="24">
+        	Odiseo 
+          <i class="far fa-compass text-white mr-4"></i>
         </a>
       </div>
 
