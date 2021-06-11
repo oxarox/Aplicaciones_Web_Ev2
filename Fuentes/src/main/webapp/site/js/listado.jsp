@@ -57,22 +57,16 @@
          		 </tr>
          		</thead>
          		<tbody>
-         		<% 
-         		List<Libro> LLibros;
-         		LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros");
-         		%>
+         		<% List<Libro> LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros"); %>
          		<!--<c:forEach items="LLibros" var="o" varStatus="ciclo">-->
-         		<% for(Libro o:LLibros){ 
-         		out.println(o.getNombreLibro());
-         		
-         		%>
+         		<% for(Libro o:LLibros){ %>
          		<tr>
-         			<td><%=o.getNombreLibro() %></td>
-         			<td><%=o.getAutorLibro() %></td>
-         			<td><%=o.getCantPaginas() %></td>
-         			<td><%=o.isDestacado() %></td>
-         			<td><%=o.getPortada() %></td>
-         			<td><%=o.getCategoria() %></td>
+         			<td><%o.getNombreLibro();  %></td>
+         			<td><%o.getAutorLibro();  %></td>
+         			<td><%o.getCantPaginas();  %></td>
+         			<td><%o.isDestacado();  %></td>
+         			<td><%o.getPortada();  %></td>
+         			<td><%o.getCategoria();  %></td>
          			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar persona</a></td>
                     <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deleteLibro(${ciclo.index},'Nombre de Libro fila')">Eliminar Libro</button></td>
          		</tr>
