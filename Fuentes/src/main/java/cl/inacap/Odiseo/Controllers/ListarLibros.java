@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +29,6 @@ import cl.inacap.Odiseo.DTO.Libro;
 public class ListarLibros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private List<Libro> listaLibroTxt = new ArrayList<Libro>();
-       
-  
     public ListarLibros() {
         super();
         // TODO Auto-generated constructor stub
@@ -35,19 +36,16 @@ public class ListarLibros extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//PrintWriter out = response.getWriter();
+		//out.println("hola mundo");
+		
 		HttpSession sessionValida= request.getSession(true);
-				
+		listaLibroTxt.clear();
 		libroDAO ldao = new libroDAO();
 		listaLibroTxt.addAll(ldao.leerAllTxt());
-		
 		request.setAttribute("ListaLibros", listaLibroTxt);
-		
-		RequestDispatcher rd = request.getRequestDispatcher("/site/js/listado.jsp");
-		rd.forward(request, response);
-		
+		request.getRequestDispatcher("/site/js/listado.jsp").forward(request, response);
 	}
-		
-		
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
