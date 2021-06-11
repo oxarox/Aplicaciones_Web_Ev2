@@ -99,6 +99,7 @@
          		<% 
          		List<Libro> LLibros;
          		LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros");
+         		LLibros.get(1).getNombreLibro();
          		%>
          		<!--<c:forEach items="LLibros" var="o" varStatus="ciclo">-->
          		<% for(Libro o:LLibros){          		
@@ -129,16 +130,6 @@
     </div>
   </div>
 </section>
-
-   
-
- 
- 
- 
- 
- 
-
-
  <jsp:include page="Footer.jsp"/>
  <script>
     $(document).ready(function (){
