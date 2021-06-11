@@ -7,11 +7,13 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cl.inacap.Odiseo.DAO.libroDAO;
 import cl.inacap.Odiseo.DTO.Libro;
@@ -22,6 +24,7 @@ import cl.inacap.Odiseo.DTO.Libro;
 @WebServlet("/ListarLibros.do")
 public class ListarLibros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private List<Libro> listaLibroTxt = new ArrayList<Libro>();
        
   
     public ListarLibros() {
@@ -31,45 +34,16 @@ public class ListarLibros extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession sessionValida= request.getSession(true);
+				
+		libroDAO ldao = new libroDAO();
+		listaLibroTxt.addAll(ldao.leerAllTxt());
 		
-		PrintWriter out=response.getWriter();
+		request.setAttribute("ListaLibros", listaLibroTxt);
 		
-		libroDAO ld=new libroDAO();
-		List<Libro> libroList=ld.getAllLibros();
+		RequestDispatcher rd = request.getRequestDispatcher("/site/js/listado.jsp");
+		rd.forward(request, response);
 		
-		
-		request.setAttribute("ListaLibros", libroList);
-		
-		request.getRequestDispatcher("site/listado.jsp");
-		
-		List<Libro> listaLibroTxt = new ArrayList<Libro>();
-		
-		//leer el archivo de Txt para traer los lisbros guadados de en una lista
-		FileReader archivo = new FileReader("/site/texto/LibroGuardados.txt");
-		String cadena = new BufferedReader(archivo).readLine();
-		
-		//General una lista para almacenar los libros
-		String [] stringLibros = cadena.split("/*--*/");
-		
-		for(int i = 0;i<=cadena.length();i++) {
-			String [] sl = stringLibros[i].split("/--/");
-			Libro l = new Libro();
-			l.setNombreLibro(sl[1]);
-			l.setAutorLibro(sl[2]);
-			l.setCantPaginas(Integer.parseInt(sl[3]));
-			if(sl[4].equals("true")) {
-				l.setDestacado(true);
-			}else {
-				l.setDestacado(false);
-			}
-			l.setPortada(sl[5]);
-			l.setCategoria(sl[6]);
-			listaLibroTxt.add(l);
-		}
-		
-		
-		ld.addAllLibros(listaLibroTxt);
-
 	}
 		
 		
