@@ -66,6 +66,7 @@
           </li>
 
           <!-- Esta wea sera perfil , login se utilizara para ver la pagina-->
+          <!--   //Edit por cosas de demostracion y mas facil debug mandamos el login para el home-->
           <li class="navbar-item">
             <a href="Perfil.do" class="nav-link">Perfil</a>
           </li>
