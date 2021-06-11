@@ -89,6 +89,7 @@
          		 	<th>Paginas</th>
          		 	<th>Categoria</th>
          		 	<th>Portada</th>
+         		 	<th>Detalle</th>
          		 	<th>Editar Libro</th>
          		 	<th>Eliminar Libro</th>
          		 
@@ -100,20 +101,22 @@
          		List<Libro> LLibros;
          		LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros");
          		%>
-         		<!--<c:forEach items="LLibros" var="o" varStatus="ciclo">-->
-         		<% for(Libro o:LLibros){          		
+         
+         		<% for(int i=0; i<LLibros.size();i++ ){ 
+         			Libro o = LLibros.get(i);
          		%>
          		<tr>
          			<td><%=o.getNombreLibro() %></td>
          			<td><%=o.getAutorLibro() %></td>
          			<td><%=o.getCantPaginas() %></td>
          			<td><%=o.getCategoria() %></td>
-         			<td><%=o.getPortada() %></td>
-         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar persona</a></td>
-                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deleteLibro(${ciclo.index},'Nombre de Libro fila')">Eliminar Libro</button></td>
+         			<td><img src=<%=o.getPortada()%> width="256" height="256" /></td>
+         			<td class="text-center"><a class="btn btn-sm btn-primary" href="Detalle.do?Iden=<%=i%>">Detalle Libro</a></td>
+         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditLibro.do?Iden=<%=i%>">Editar libro</a></td>
+                    <td class="text-center"><button  id="borrar" class="btn btn-sm btn-danger" onclick="deleteLibro(<%=i%>,'Nombre de Libro fila')">Eliminar Libro</button></td>
          		</tr>
          		<% }%>
-         		<!--</c:forEach>-->
+         	
          		</tbody>
          		</table>
          	
@@ -144,15 +147,21 @@
     $(document).ready(function (){
        
         $('#myTable').DataTable();
+        
 
     });
 
     
+    
+    
+    
+  
+    
 
-    function deletePersona(Index,NombrePersona){
+    function deleteLibro(LLibros,i){
         $.confirm({
             title: "Consulta",
-            content: "Seguro de eliminar a "+NombrePersona,
+            content: "Seguro de eliminar a "+NombreLibro,
             icon: 'fa fa-question-circle-o',
             theme: 'supervan',
             closeIcon: false,
@@ -165,17 +174,17 @@
                     action: function(heyThereButton){
                       	
                     	var jsonSend={
-                    		'Id':Index
+                    		'Id':i
                     	}
                     	
                     	
                     	$.ajax({
                     		type: "POST",
-                    		url : "ListartPersonas.do",
-                        	data: {"Id":Index,"Opc":1},
+                    		url : "ListarLibros.do",
+                        	data: {"Id":i,"Opc":1},
                         	success:function (obj){
                         		console.log(obj)		
-                        		alert("Se elimino la persona")
+                        		alert("Se elimino el libro")
                         		setTimeout("location.reload()",4000);
                         		
                         	}
