@@ -35,10 +35,8 @@ public class ListarLibros extends HttpServlet {
 		libroDAO ld=new libroDAO();
 		List<Libro> libroList=ld.getAllLibros();
 		
-		
 		request.setAttribute("ListaLibros", libroList);
-		
-		request.getRequestDispatcher("site/listado.jsp");
+		request.getRequestDispatcher("site/js/listado.jsp").forward(request, response);
 		
 	
 	}
