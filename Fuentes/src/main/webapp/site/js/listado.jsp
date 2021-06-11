@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
     
      <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="cl.inacap.Odiseo.DTO.Libro"%>
 
 
 <jsp:include page="Header.jsp" />
@@ -94,21 +96,25 @@
          		</thead>
          		
          		<tbody>
-         		<c:forEach items="${ListaLibros}" var="o" varStatus="ciclo">
+         		<% 
+         		List<Libro> LLibros;
+         		LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros");
+         		%>
+         		<!--<c:forEach items="LLibros" var="o" varStatus="ciclo">-->
+         		<% for(Libro o:LLibros){          		
+         		%>
          		<tr>
-         			<td>${o.Nombre }</td>
-         			<td>${o.Autor }</td>
-         			<td>${o.Paginas }</td>
-         			<td>${o.Categoria }</td>
-         			<td>${o.Portada }</td>
-         			<td class="text-center"><a class="btn btn-sm btn-outline-success" href="EditPersona.do?Iden=${ciclo.index}"><i class="far fa-edit"></i></a></td>
-                    <td class="text-center"><button class="btn btn-sm btn-outline-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')"><i class="fas fa-trash-alt"></i></button></td>
-                        	
+         			<td><%=o.getNombreLibro() %></td>
+         			<td><%=o.getAutorLibro() %></td>
+         			<td><%=o.getCantPaginas() %></td>
+         			<td><%=o.getCategoria() %></td>
+         			<td><%=o.getPortada() %></td>
+         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar persona</a></td>
+                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deleteLibro(${ciclo.index},'Nombre de Libro fila')">Eliminar Libro</button></td>
          		</tr>
-         		</c:forEach>
+         		<% }%>
+         		<!--</c:forEach>-->
          		</tbody>
-         		
-         		
          		</table>
          	
          	

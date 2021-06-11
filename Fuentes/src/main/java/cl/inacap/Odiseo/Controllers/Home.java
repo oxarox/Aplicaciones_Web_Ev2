@@ -21,6 +21,7 @@ import cl.inacap.Odiseo.DTO.Libro;
 @WebServlet("/Home.do")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private List<Libro> listaLibroTxtDestacados = new ArrayList<Libro>();
 	
 
     /**
@@ -38,6 +39,8 @@ public class Home extends HttpServlet {
 
 		if(sessionValida.getAttribute("SessionActiva")=="1") {
 			//La fuente siempre cuando exista una session en este caso SessionActiva =="1"
+			libroDAO ldao = new libroDAO();
+			listaLibroTxtDestacados.addAll(ldao.leerDestacadosTxt());
 			request.getRequestDispatcher("site/js/home.jsp").forward(request, response);
 			
 		}else {
