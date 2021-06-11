@@ -12,7 +12,7 @@
   
  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   
- 	<link rel="stylesheet" href="../Html/css/styles.css">
+ 	<link rel="stylesheet" href="site/Html/css/styles.css">
   
   	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   
@@ -58,22 +58,22 @@
         <ul class="navbar-nav ml-auto ">
 
           <li class="navbar-item">
-            <a href="home.jsp" class="nav-link">Home</a>
+            <a href="Home.do" class="nav-link">Home</a>
           </li>
 
           <li class="navbar-item">
-            <a href="listado.jsp" class="nav-link">Listado</a>
+            <a href="ListarLibros.do" class="nav-link">Listado</a>
           </li>
 
           <!-- Esta wea sera perfil , login se utilizara para ver la pagina-->
           <li class="navbar-item">
-            <a href="perfil.jsp" class="nav-link">Perfil</a>
+            <a href="Perfil.do" class="nav-link">Perfil</a>
           </li>
 
         </ul>
       </div>
     </nav>
-  </section>
+
   
   </header>
   <body>
