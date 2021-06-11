@@ -8,8 +8,11 @@
       <div class="container">
         <div class="row py-4 d-flex align-item-center">
           <div class="col-md-12 text-center">
-            <a href=""><i class="far fa-compass text-white mr-4"></i></a>
-
+			<a href="https://twitter.com/"><i class="fab fa-twitter text-white mr-4"></i></a>
+			<a href="https://www.facebook.com/"><i class="fab fa-facebook text-white mr-4"></i></a>
+			<a href="https://discord.com/"><i class="fab fa-discord text-white mr-4"></i></a>
+			<a href="https://instagram.com/"><i class="fab fa-instagram text-white mr-4"></i></a>
+			
           </div>
 
         </div>
@@ -25,18 +28,8 @@
           <p class=" mt-2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 
         </div>
-        <div class="col-md-2 mx-auto mb-4">
-          <h6 class=" text-uppercase font-weight-bold">Contacto </h6>
-          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style= "width: 125px; height:2px">
-          <ul class="list-unstyled">
-            <li class="my-2"><a href="#">Dirección</a></li>
-            <li class="my-2"><a href="#">Teléfono</a></li>
-            <li class="my-2"><a href="#">Razón social</a></li>
-
-          </ul>
-
-        </div>
-        <div class="col-md-3 mx-auto mb-4">
+        
+         <div class="col-md-3 mx-auto mb-4">
           <h6 class=" text-uppercase font-weight-bold">Autores</h6>
           <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style= "width: 125px; height:2px">
           <ul class="list-unstyled">
@@ -46,11 +39,31 @@
             <li class="my-2"><a href="#">George Orwell</a></li>
           </ul>
         </div>
+        
+        <div class="col-md-3 mx-auto mb-4">
+          <h6 class=" text-uppercase font-weight-bold">Contacto </h6>
+          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style= "width: 125px; height:2px">
+          
+          <ul class="list-unstyled">
+            <li class="my-2"><a href="#"><i class="fas fa-home mr-3"></i>Av.Srsly 69</a></li>
+            <li class="my-2"><a href="#"><i class="fas fa-phone mr-3"></i>63636353</a></li>
+            <li class="my-2"><a href="#"><i class="far fa-envelope mr-3"></i>getsomehelp@gmail.com</a></li>
+            <li class="my-2"><a href="#"><i class="fas fa-fax mr-3"></i>Iluso, como si fuéramos a responder el fax.</a></li>
+
+          </ul>
+
+        </div>
+       
 
       </div>
 
     </div>
-     	
+     <div class="footer-copyright text-center py-3">
+     <p>&copy; Copyright 
+     <br> Diseñado por Manuel Meza, Oscar Muñoz y Gustavo Soto.
+     </p>
+     
+     </div>
    	</footer>
    	<!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

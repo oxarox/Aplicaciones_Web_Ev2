@@ -12,18 +12,29 @@
  <body>
  
  
+ <section class="intermedio" style="margin-top:0">
+    <div class="container-fluid">
+      <div class="row align-item-center justify-content-center">
+        <div class="col-md-10">
+          <h1>¿Estás buscando un libro? pues que pena, aquí no está</h1>
+        </div>
+      </div>
+    </div>
+</section>
   <!-- Busqueda mediante escrito -->
 
 <section class="buscador_tags">
 	<div class="container">
-		<div class="row">
+		<div class="row align-content">
 			<div class="col-md-3">
-				<div class="buscar">
-					<input type="text" placeholder="¡Pruebe a buscar con la palabra 'Terror'!" required>
-					<div class="btn">
-						<i class="fas fa-compass"></i>
+				<div class="container">
+					<div class="buscar">
+						<input type="text" placeholder="¡Pruebe a buscar con la palabra 'Terror'!" required>
+						<div class="btn">
+							<i class="fas fa-compass"></i>
+						</div>
 					</div>
-				</div>		
+				</div>
 			</div>
 		</div>
 	</div>
@@ -67,7 +78,7 @@
          <div class="row">
          
          	<div class="col-md-12">
-         		<table class="table table-bordered table-striped" id="myTable">
+         		<table class="table content-table" id="myTable">
          		
          		<thead>
          		 <tr>
@@ -76,6 +87,8 @@
          		 	<th>Paginas</th>
          		 	<th>Categoria</th>
          		 	<th>Portada</th>
+         		 	<th>Editar Libro</th>
+         		 	<th>Eliminar Libro</th>
          		 
          		 </tr>
          		</thead>
@@ -88,8 +101,8 @@
          			<td>${o.Paginas }</td>
          			<td>${o.Categoria }</td>
          			<td>${o.Portada }</td>
-         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar libro</a></td>
-                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')">Elminar libro</button></td>
+         			<td class="text-center"><a class="btn btn-sm btn-outline-success" href="EditPersona.do?Iden=${ciclo.index}"><i class="far fa-edit"></i></a></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')"><i class="fas fa-trash-alt"></i></button></td>
                         	
          		</tr>
          		</c:forEach>

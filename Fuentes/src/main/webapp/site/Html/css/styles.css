@@ -132,14 +132,20 @@
 }
 
 .genero{
-  text-align: right;
+  text-align: left;
 }
+
+/* Movimiento del sistema de búsqueda*/
 .buscar{
+	
 	position:absolute;
 	padding:5px;
 }
 
 .buscador_tags .container{
+	margin-top:50px;
+	margin-bottom:50px;
+	display:flex;
 	height:50px;
 	justify-content:center;
 	align-items:center;
@@ -162,21 +168,84 @@
 	top:0;
 	right:0;
 	position:absolute;
-	text-align: center;
+	text-align:center;
 	color:white;
 	background:#c1c0b9;
 	font-size:20px;
 	border-radius:50%;
 	cursor:pointer;
+	padding:0;
+	margin:0;
 }
 
 .buscar:hover input{
-	width:360px;
+	width:400px;
 }
 .buscar input:focus{
 	width:360px;
 }
+
+/*Contenido de las tablas del listado*/
+
+.content-table{
+	border-collapse:collapse;
+	margin:25px 0;
+	font-size: 1.2em;
+	min-width:400px;/* Lo más probable que aquí tenga problema*/
+	border-radius: 5px 5px 0 0;
+	overflow:hidden;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,15);
+
+}
+.content-table a {
+}
+
+.content-table thead tr{
+	background-color:#3ee685;
+	color:#ffffff;
+	text-align:left;
+	font-weight:bold;
+	
+}
+
+.content-table th,
+.content-table td{
+	padding: 12px 15px;
+	
+}
+
+.content-table tbody tr{
+	border-bottom:1px solid #3ee685;
+	
+	
+}
+
+.content-table tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+	border-bottom: 2px solid #00C851;
+}
+/* Este contenido podría dejarse para los libros que se encuentran en formato destacados
+table tbody tr .active-row{
+	font-weight:bold;
+	color:	#00C851
+}
+Bibliografía: https://www.youtube.com/watch?v=biI9OFH6Nmg*/
+
                 /*------------Sección del descriptor---------------*/
 .descripciones .container{
 	margin-top:50px;
+}
+                /*-----------Seccion del perfil---------------------*/
+.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.desc {
+  text-align: center;
+  padding: 10px 20px;
 }

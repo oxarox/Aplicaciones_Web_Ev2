@@ -53,6 +53,7 @@
         <li data-target="#carrusel_destacados" data-slide-to="1"></li>
         <li data-target="#carrusel_destacados" data-slide-to="2"></li>
         <li data-target="#carrusel_destacados" data-slide-to="3"></li>
+        <li data-target="#carrusel_destacados" data-slide-to="4"></li>
       </ol>
 
       <!--Secciones de cada carrusel-->
@@ -75,13 +76,19 @@
         <div class="carousel-item ">
           <img src="https://www.caracteristicas.co/wp-content/uploads/2016/09/ciencias-sociales-e1559699629114.jpg" class="d-block w-100" alt="..." height="18%" width="100%">
           <div class="carousel-caption d-none d-md-block">
-            <h5 style="color: black"><i>Ciencias Sociales</i></h5>
+            <h5 style="color: white"><i>Ciencias Sociales</i></h5>
           </div>
         </div>
         <div class="carousel-item ">
           <img src="https://images5.alphacoders.com/105/1051727.jpg" class="d-block w-100" alt="..." height="18%" width="100%">
           <div class="carousel-caption d-none d-md-block">
             <h5 style="color: white"><i>Ciencia Ficción</i></h5>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <img src="https://i.kym-cdn.com/entries/icons/original/000/016/546/hidethepainharold.jpg" class="d-block w-100" alt="..." height="18%" width="100%">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: black"><i>Auto Ayuda</i></h5>
           </div>
         </div>
       </div>
@@ -196,7 +203,8 @@
 	    <div class="container-fluid">
 	      <div class="row align-item-center justify-content-center">
 	        <div class="col-md-10">
-	          <h1>¡Conozca las opiniones de algunos de nuestros lectores!</h1>
+	          <h1>¡Te invitamos a seguirnos en nuestras redes sociales!</h1>
+	          <p> y si no tienes, me gustaría saber donde has vivido estos últimos años ¡Déjalo en los comentarios!</p>
 	        </div>
 	      </div>
 	    </div>
