@@ -1,11 +1,9 @@
 package cl.inacap.Odiseo.Controllers;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet; 
@@ -21,6 +19,7 @@ import cl.inacap.Odiseo.DTO.Libro;
 @WebServlet("/Home.do")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private List<Libro> listaLibroTxtDestacados = new ArrayList<Libro>();
 	
 
     /**
@@ -35,18 +34,19 @@ public class Home extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sessionValida= request.getSession(true);
-
-		if(sessionValida.getAttribute("SessionActiva")=="1") {
+    if(sessionValida.getAttribute("SessionActiva")=="1") {
 			//La fuente siempre cuando exista una session en este caso SessionActiva =="1"
 			request.getRequestDispatcher("site/js/home.jsp").forward(request, response);
-			
 		}else {
 			response.sendRedirect("Login.do");
-			
 		}
+    
+		libroDAO ldao = new libroDAO();
+		listaLibroTxtDestacados.addAll(ldao.leerDestacadosTxt());
+		RequestDispatcher rd = request.getRequestDispatcher("/site/js/home.jsp");
+        rd.forward(request, response);
 	}
-		
-	
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

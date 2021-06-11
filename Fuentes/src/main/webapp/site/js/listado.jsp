@@ -1,19 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
      <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
-
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="cl.inacap.Odiseo.DTO.Libro"%>
 <jsp:include page="Header.jsp" />
-
 <!--  Le puse listado para que fuera mas facil identificar donde van las listas -->
-
  <body>
- 
- 
   <!-- Busqueda mediante escrito -->
-
 <section class="buscador_tags">
 	<div class="container">
 		<div class="row">
@@ -28,24 +22,12 @@
 		</div>
 	</div>
 </section>
-
-
-
     <!-- Sección de los libros a describir-->
-
-
-    
 <section class="buscador_acordeon">
-
-
   <div class="resultados">
     <div class="accordion" id="acordeon_buscador">
-    
-    
 <!-- 
       Título y género de cada libro
-
-
 		Carta N°1 (El id del card-header tiene que ir cambiando según la cantidad de cartas y recordar cambiar el aria-labelledby sin #)
         <div class="card">
             <div class="card-header" id="cabeza1">
@@ -54,7 +36,6 @@
 					<p class="genero">Ciencia ficción</p>                
 				</h5>
             </div>
-            
             Contenido de las cartas (Recordar también cambiar el id en conjunto con el data-target con #)
             <div id="colapso1" class="collapse" aria-labelledby="cabeza1" data-parent="#acordeon_buscador">
                 <div class="card-body">
@@ -63,12 +44,9 @@
             </div>
         </div>
          -->
-         
          <div class="row">
-         
          	<div class="col-md-12">
          		<table class="table table-bordered table-striped" id="myTable">
-         		
          		<thead>
          		 <tr>
          		 	<th>Nombre</th>
@@ -76,64 +54,40 @@
          		 	<th>Paginas</th>
          		 	<th>Categoria</th>
          		 	<th>Portada</th>
-         		 
          		 </tr>
          		</thead>
-         		
          		<tbody>
-         		<c:forEach items="${ListaLibros}" var="o" varStatus="ciclo">
+         		<% List<Libro> LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros"); %>
+         		<!--<c:forEach items="LLibros" var="o" varStatus="ciclo">-->
+         		<% for(Libro o:LLibros){ %>
          		<tr>
-         			<td>${o.Nombre }</td>
-         			<td>${o.Autor }</td>
-         			<td>${o.Paginas }</td>
-         			<td>${o.Categoria }</td>
-         			<td>${o.Portada }</td>
-         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar libro</a></td>
-                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deletePersona(${ciclo.index},'Nombre de persona fila')">Elminar libro</button></td>
-                        	
+         			<td><%o.getNombreLibro();  %></td>
+         			<td><%o.getAutorLibro();  %></td>
+         			<td><%o.getCantPaginas();  %></td>
+         			<td><%o.isDestacado();  %></td>
+         			<td><%o.getPortada();  %></td>
+         			<td><%o.getCategoria();  %></td>
+         			<td class="text-center"><a class="btn btn-sm btn-success" href="EditPersona.do?Iden=${ciclo.index}">Editar persona</a></td>
+                    <td class="text-center"><button class="btn btn-sm btn-danger" onclick="deleteLibro(${ciclo.index},'Nombre de Libro fila')">Eliminar Libro</button></td>
          		</tr>
-         		</c:forEach>
+         		<% }%>
+         		<!--</c:forEach>-->
          		</tbody>
-         		
-         		
          		</table>
-         	
-         	
-         	
          	</div>
-         
-         
          </div>
-     
-        
-
     </div>
   </div>
 </section>
-
-   
-
- 
- 
- 
- 
- 
-
-
  <jsp:include page="Footer.jsp"/>
  <script>
     $(document).ready(function (){
-       
         $('#myTable').DataTable();
-
     });
-
-    
-
-    function deletePersona(Index,NombrePersona){
+    function deleteLibro(Index,NombreLibro){
         $.confirm({
             title: "Consulta",
-            content: "Seguro de eliminar a "+NombrePersona,
+            content: "Seguro de eliminar a "+NombreLibro,
             icon: 'fa fa-question-circle-o',
             theme: 'supervan',
             closeIcon: false,
@@ -144,12 +98,9 @@
                     text: 'Si', // text for button
                     btnClass: 'btn-blue', // class for the button
                     action: function(heyThereButton){
-                      	
                     	var jsonSend={
                     		'Id':Index
                     	}
-                    	
-                    	
                     	$.ajax({
                     		type: "POST",
                     		url : "ListartPersonas.do",
@@ -158,16 +109,10 @@
                         		console.log(obj)		
                         		alert("Se elimino la persona")
                         		setTimeout("location.reload()",4000);
-                        		
                         	}
-                    			
-                    		
                     	})
-                    	
-                    	
                     }
                 },
-
                 cancel: {
                     text: 'No', // text for button
                     btnClass: 'btn-blue', // class for the button
@@ -177,12 +122,6 @@
                 },
             }   
         });
-
-
     }
-
-   
-
 </script>
- 
   </html>
