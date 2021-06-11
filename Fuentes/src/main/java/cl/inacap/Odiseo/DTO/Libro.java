@@ -78,5 +78,7 @@ public class Libro {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
+	
 
 }
