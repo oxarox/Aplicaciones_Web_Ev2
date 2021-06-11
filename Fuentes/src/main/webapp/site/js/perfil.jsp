@@ -16,7 +16,7 @@
 		    <div class="polaroid">
 	  			<img src="https://i.pinimg.com/originals/f4/b7/c4/f4b7c44863b0e6cc3b273481cd7bf284.jpg" alt="5 Terre" style="width:100%; opacity:0.5">
 	  			<div class="desc">
-	  				<p>Mira, tu consciencia se está yendo, ¡Deberías leer más para no quedar igual de flaite como esta imagen!</p>
+	  				<p>Mira, tu conciencia se está llendo, ¡Deberías leer más para no quedar igual de flaite como esta imagen!</p>
 	  			</div>
 	  		</div>
 		</div>
@@ -27,7 +27,7 @@
 	   	 <h5>Biografía</h5>
 	   	 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor</p>
 	        	<br>Edad:33 años 
-	       	    <br>Género preferido: hentai
+	       	    <br>Género preferido: Novela-Accion
 	       	    <br>Inicio Subscripción:10 años 
 	      	    <br>Libros que has rankeado: Secreto en la montaña, las motañas de la locura.    
 	    </div>
