@@ -2,6 +2,7 @@ package cl.inacap.Odiseo.Controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -9,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 import cl.inacap.Odiseo.DAO.libroDAO;
 import cl.inacap.Odiseo.DTO.Libro;
@@ -20,7 +21,7 @@ import cl.inacap.Odiseo.DTO.Libro;
 @WebServlet("/ListarLibros.do")
 public class ListarLibros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private List<Libro> listaLibroTxt = new ArrayList<Libro>();
   
     public ListarLibros() {
         super();
@@ -30,12 +31,10 @@ public class ListarLibros extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PrintWriter out=response.getWriter();
-		
-		libroDAO ld=new libroDAO();
-		List<Libro> libroList=ld.getAllLibros();
-		
-		request.setAttribute("ListaLibros", libroList);
+		HttpSession sessionValida= request.getSession(true);
+		libroDAO ldao=new libroDAO();
+		listaLibroTxt.addAll(ldao.leerAllTxt());
+		request.setAttribute("ListaLibros", listaLibroTxt);
 		request.getRequestDispatcher("site/js/listado.jsp").forward(request, response);
 		
 	
