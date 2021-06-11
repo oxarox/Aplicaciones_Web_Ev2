@@ -16,7 +16,7 @@
 		    <div class="polaroid">
 	  			<img src="https://i.pinimg.com/originals/f4/b7/c4/f4b7c44863b0e6cc3b273481cd7bf284.jpg" alt="5 Terre" style="width:100%; opacity:0.5">
 	  			<div class="desc">
-	  				<p>Mira, tu conciencia se está llendo, ¡Deberías leer más para no quedar igual de flaite como esta imagen!</p>
+	  				<p>Mira, tu conciencia se está yendo, ¡Deberías leer más para no quedar igual de flaite como esta imagen!</p>
 	  			</div>
 	  		</div>
 		</div>
