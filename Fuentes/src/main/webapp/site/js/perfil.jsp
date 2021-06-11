@@ -22,7 +22,7 @@
 		</div>
 	    
 	    <div class="col-md-8">
-	    	 <h3>Jhon Doe</h3>
+	    	 <h3>Gato con botas</h3>
 	    	 <p class="genero">Libros Leídos: 0 <br> Felicitaciones inculto de mierda, puedes iniciar tu recorrido por la literatura con nosotros!</p><!-- No borrar que puede que lo necesite después -->
 	   	 <h5>Biografía</h5>
 	   	 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor</p>
