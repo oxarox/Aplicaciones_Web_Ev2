@@ -34,7 +34,7 @@ public class libroDAO {
 	}
 	
 	public Libro getLibrobyID(int id) {
-		return arrLibros.get(id);
+		return listaLibroTxt.get(id);
 	}
 	
 	public void updateLibro(Libro p,int id) {
@@ -42,7 +42,7 @@ public class libroDAO {
 	}
 
 	public static List<Libro> leerAllTxt() {
-		Path archivo = Paths.get("E:\\Univerciadad\\2021 primer semetre\\Aplicaciones web\\Proyectos Web\\Eva1ComponentesWebOscarManuelGustavo\\Aplicaciones_Web_Ev2\\Fuentes\\src\\main\\webapp\\site\\texto\\LibrosGuardados.txt");
+		Path archivo = Paths.get("D:\\manuel\\GitRepository\\Aplicaciones_Web_Ev2\\Fuentes\\src\\main\\webapp\\site\\texto\\LibrosGuardados.txt");
 		try {
 			BufferedReader buffer = Files.newBufferedReader(archivo);
 			String cadena;
@@ -67,7 +67,7 @@ public class libroDAO {
 		return listaLibroTxt;
 	}
 	public static List<Libro> leerDestacadosTxt() {
-		Path archivo = Paths.get("E:\\Univerciadad\\2021 primer semetre\\Aplicaciones web\\Proyectos Web\\Eva1ComponentesWebOscarManuelGustavo\\Aplicaciones_Web_Ev2\\Fuentes\\src\\main\\webapp\\site\\texto\\LibrosGuardados.txt");
+		Path archivo = Paths.get("D:\\manuel\\GitRepository\\Aplicaciones_Web_Ev2\\Fuentes\\src\\main\\webapp\\site\\texto\\LibrosGuardados.txt");
 		try {
 			BufferedReader buffer = Files.newBufferedReader(archivo);
 			String cadena;
