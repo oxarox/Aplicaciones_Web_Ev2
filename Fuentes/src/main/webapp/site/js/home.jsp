@@ -127,7 +127,7 @@
 		      <div class="col-md-3">
 		          <div class="card-container mx-auto mt-5">
 		            <div class="card card-front">
-		              <img src=<%=o.getPortada()%> width="256" height="256" />
+		              <img src=<%=o.getPortada()%> width="240px" height="200px"  />
 		              <div class="card-body">
 		                <h5 class="card-title"><%=o.getNombreLibro() %></h5>
 		                <p class="card-text"><i><%=o.getCategoria() %></i><br> <%=o.getAutorLibro() %></p>
