@@ -133,15 +133,6 @@
   </div>
 </section>
 
-   
-
- 
- 
- 
- 
- 
-
-
  <jsp:include page="Footer.jsp"/>
  <script>
     $(document).ready(function (){
@@ -150,13 +141,6 @@
         
 
     });
-
-    
-    
-    
-    
-  
-    
 
     function deleteLibro(LLibros,i){
         $.confirm({
