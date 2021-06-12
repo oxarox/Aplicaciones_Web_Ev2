@@ -100,7 +100,6 @@
          		<% 
          		List<Libro> LLibros;
          		LLibros = (ArrayList<Libro>)request.getAttribute("ListaLibros");
-         		LLibros.get(1).getNombreLibro();
          		%>
          
          		<% for(int i=0; i<LLibros.size();i++ ){ 
@@ -133,6 +132,16 @@
     </div>
   </div>
 </section>
+
+   
+
+ 
+ 
+ 
+ 
+ 
+
+
  <jsp:include page="Footer.jsp"/>
  <script>
     $(document).ready(function (){
