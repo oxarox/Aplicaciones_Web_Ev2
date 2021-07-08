@@ -38,7 +38,7 @@
       <!--Logo de la marca-->
       <div class="container">
         <a class="navbar-brand" href="#">
-        	Odiseo 
+        	Fast Developer 
           <i class="far fa-compass text-white mr-4"></i>
         </a>
       </div>
@@ -56,11 +56,16 @@
 
         <!--Opciones de la barra buscadora-->
         <ul class="navbar-nav ml-auto ">
-
+			
           <li class="navbar-item">
             <a href="home.jsp" class="nav-link">Home</a>
           </li>
-
+			<li class="navbar-item">
+            <a href="home.jsp" class="nav-link">Ventas</a>
+          </li>
+          <li class="navbar-item">
+            <a href="home.jsp" class="nav-link">Arriendos</a>
+          </li>
           <li class="navbar-item">
             <a href="listado.jsp" class="nav-link">Listado</a>
           </li>

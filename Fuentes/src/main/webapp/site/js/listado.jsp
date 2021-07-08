@@ -87,9 +87,10 @@
          		 	<th>Paginas</th>
          		 	<th>Categoria</th>
          		 	<th>Portada</th>
+         		 	<th>Stock</th>
          		 	<th>Editar Libro</th>
          		 	<th>Eliminar Libro</th>
-         		 
+         		 	
          		 </tr>
          		</thead>
          		
